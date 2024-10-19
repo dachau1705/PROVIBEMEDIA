@@ -77,7 +77,7 @@ const Home = () => {
                         fontSize: '2rem', // Font size
                     }}
                 >
-                    <Typography
+                    {/* <Typography
                         sx={{
                             fontWeight: 'bold',
                             fontSize: 70,
@@ -86,7 +86,7 @@ const Home = () => {
                         }}
                     >
                         Welcome to Our Website
-                    </Typography>
+                    </Typography> */}
 
                 </Box>
             </Box>
