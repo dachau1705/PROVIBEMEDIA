@@ -62,21 +62,33 @@ const Home = () => {
     return (
         <div>
             {/* Banner Full Width */}
-            <Box
-                sx={{
-                    width: '100%', // Full width
-                    height: '400px', // Set a height for the banner
-                    backgroundImage: 'url(/banner2.webp)',
-                    backgroundSize: 'cover', // Cover the entire area
-                    backgroundPosition: 'center', // Center the image
-                    display: 'flex', // Center content
-                    alignItems: 'center', // Center vertically
-                    justifyContent: 'center', // Center horizontally
-                    color: 'white', // Text color
-                    fontSize: '2rem', // Font size
-                }}
-            >
-                <Typography variant="h2">Welcome to Our Website</Typography>
+            <Box>
+                <Box
+                    sx={{
+                        width: '100%', // Full width
+                        height: '400px', // Set a height for the banner
+                        backgroundImage: 'url(/banner2.webp)',
+                        backgroundSize: 'cover', // Cover the entire area
+                        backgroundPosition: 'center', // Center the image
+                        display: 'flex', // Center content
+                        alignItems: 'center', // Center vertically
+                        justifyContent: 'center', // Center horizontally
+                        color: 'white', // Text color
+                        fontSize: '2rem', // Font size
+                    }}
+                >
+                    <Typography
+                        sx={{
+                            fontWeight: 'bold',
+                            fontSize: 70,
+                            color: "whitesmoke",
+                            WebkitTextStroke: "2px black", // Black border around the text
+                        }}
+                    >
+                        Welcome to Our Website
+                    </Typography>
+
+                </Box>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}> {/* Center vertically and horizontally */}
                 <Box className="section-content" sx={{ padding: 2, width: "75%" }}>
