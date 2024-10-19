@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@mui/material'; // Import Box from MUI for layout
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/layout/Header';
+import About from './components/screens/About';
+import Home from './components/screens/Home';
+import Services from './components/screens/Services';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header /> {/* Header với các nút điều hướng */}
+      <Box sx={{ paddingTop: '64px' }}> {/* Adjust padding for the fixed header */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          {/* Thêm các Route khác ở đây */}
+        </Routes>
+      </Box>
+    </Router>
   );
-}
+};
 
 export default App;

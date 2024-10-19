@@ -1,0 +1,35 @@
+/* Header.css */
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff; /* Adjust as needed */
+}
+
+.logo img {
+  max-height: 90px; /* Adjust to fit your design */
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000; /* Adjust as needed */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.header-search {
+  position: relative;
+}
