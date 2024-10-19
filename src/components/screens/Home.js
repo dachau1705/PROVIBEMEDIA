@@ -1,6 +1,7 @@
 import { Box, Card, CardActionArea, CardMedia, Grid, Link, Paper, Typography } from '@mui/material'; // Import Box and Typography from MUI
 import { default as React } from 'react';
 import Banner from '../layout/Banner';
+import ContactSection from '../layout/ContactSection';
 import WhyChooseUsSection from './WhyChooseUsSection';
 
 const services = [
@@ -8,30 +9,30 @@ const services = [
         title: 'SẢN XUẤT PHIM',
         imageUrl: 'https://mithalo.vn/wp-content/uploads/2020/12/icon-quay-film.png',
         links: [
-            { text: 'Phim doanh nghiệp', href: 'https://mithalo.vn/dich-vu/san-xuat-phim/san-xuat-phim-doanh-nghiep/' },
-            { text: 'Phim quảng cáo', href: 'https://mithalo.vn/dich-vu/san-xuat-phim/san-xuat-phim-quang-cao/' },
-            { text: 'Phim kỷ niệm thành lập công ty', href: 'https://mithalo.vn/dich-vu/san-xuat-phim/san-xuat-phim-viral/' },
+            { text: 'Quay video sự kiện', href: 'https://mithalo.vn/dich-vu/san-xuat-phim/san-xuat-phim-doanh-nghiep/' },
+            { text: 'Quay TVC', href: 'https://mithalo.vn/dich-vu/san-xuat-phim/san-xuat-phim-quang-cao/' },
+            // { text: 'Phim kỷ niệm thành lập công ty', href: 'https://mithalo.vn/dich-vu/san-xuat-phim/san-xuat-phim-viral/' },
+            { text: 'Quay tư liệu bài giảng', href: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/chup-anh-san-pham/' },
         ],
     },
     {
         title: 'SẢN XUẤT HÌNH ẢNH',
         imageUrl: 'https://mithalo.vn/wp-content/uploads/2020/12/icon_chupanh.png',
         links: [
-            { text: 'Chụp ảnh sản phẩm', href: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/chup-anh-san-pham/' },
-            { text: 'Chụp ảnh sự kiện', href: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/chup-anh-su-kien/' },
-            { text: 'Chụp ảnh Profile, Quảng cáo', href: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/chup-anh-profile/' },
+            { text: 'Chụp ảnh quảng cáo', href: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/chup-anh-su-kien/' },
+            { text: 'Chụp ảnh mẫu', href: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/chup-anh-profile/' },
         ],
     },
-    {
-        title: 'VR 360',
-        imageUrl: 'https://mithalo.vn/wp-content/uploads/2021/03/icon-vr-360.png',
-        description: 'Dịch vụ chụp ảnh 360 độ mang đến trải nghiệm không gian một cách vượt trội so với các loại hình Video hoặc hình ảnh tĩnh truyền thống.',
-        link: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/vr-360/',
-    },
+    // {
+    //     title: 'VR 360',
+    //     imageUrl: 'https://mithalo.vn/wp-content/uploads/2021/03/icon-vr-360.png',
+    //     description: 'Dịch vụ chụp ảnh 360 độ mang đến trải nghiệm không gian một cách vượt trội so với các loại hình Video hoặc hình ảnh tĩnh truyền thống.',
+    //     link: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/vr-360/',
+    // },
     {
         title: 'LIVE STREAM',
         imageUrl: 'https://mithalo.vn/wp-content/uploads/2021/03/icon-live-stream.png',
-        description: 'Dịch vụ livestream sự kiện nhằm chia sẻ, kết nối sự kiện, hình ảnh của mình nhanh chóng tới nhiều người hơn',
+        description: 'Livestream chuyên nghiệp ( Bao gồm setup bối cảnh, điều chỉnh độ sáng, góc camera, xử lý sự cố trong quá trình livestream)',
         link: 'https://livestreamgiare.com/',
     },
     // {
@@ -42,12 +43,12 @@ const services = [
     //         { text: 'Quảng cáo qua kênh truyền hình', href: 'https://mithalo.vn/dich-vu/booking-quang-cao/booking-quang-cao-truyen-hinh/' },
     //     ],
     // },
-    {
-        title: 'TỔ CHỨC SỰ KIỆN',
-        imageUrl: 'https://mithalo.vn/wp-content/uploads/2020/12/to-chuc-su-kien.png',
-        description: 'Hỗ trợ truyền thông, xây dựng và phát triển hình ảnh sản phẩm, dịch vụ và thương hiệu doanh nghiệp, giúp cải thiện và thay đổi nhận thức của công chúng.',
-        link: 'https://mithalo.vn/dich-vu/to-chuc-su-kien/',
-    },
+    // {
+    //     title: 'TỔ CHỨC SỰ KIỆN',
+    //     imageUrl: 'https://mithalo.vn/wp-content/uploads/2020/12/to-chuc-su-kien.png',
+    //     description: 'Hỗ trợ truyền thông, xây dựng và phát triển hình ảnh sản phẩm, dịch vụ và thương hiệu doanh nghiệp, giúp cải thiện và thay đổi nhận thức của công chúng.',
+    //     link: 'https://mithalo.vn/dich-vu/to-chuc-su-kien/',
+    // },
 ];
 const galleryImages = [
     "https://i.pinimg.com/enabled/564x/47/0f/91/470f91d421f7019cbdf34041b706b78d.jpg",
@@ -136,7 +137,7 @@ const Home = () => {
                 </Box>
             </Box>
 
-            <Box sx={{ backgroundColor: '#052e46', padding: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Box sx={{ backgroundColor: '#0a2443', padding: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Box sx={{ width: "60%" }}>
                     <Typography variant="h4" color="#fff" align="center" gutterBottom>
                         PROVIBEMEDIA
@@ -167,6 +168,8 @@ const Home = () => {
             <WhyChooseUsSection />
 
             <Banner />
+
+            <ContactSection />
         </div>
     );
 };
