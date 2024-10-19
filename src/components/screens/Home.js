@@ -30,9 +30,9 @@ const services = [
     //     link: 'https://mithalo.vn/dich-vu/san-xuat-hinh-anh/vr-360/',
     // },
     {
-        title: 'LIVE STREAM',
+        title: 'LIVE STREAM CHUYÊN NGHIỆP',
         imageUrl: 'https://mithalo.vn/wp-content/uploads/2021/03/icon-live-stream.png',
-        description: 'Livestream chuyên nghiệp ( Bao gồm setup bối cảnh, điều chỉnh độ sáng, góc camera, xử lý sự cố trong quá trình livestream)',
+        description: 'Bao gồm setup bối cảnh, điều chỉnh độ sáng, góc camera, xử lý sự cố trong quá trình livestream.',
         link: 'https://livestreamgiare.com/',
     },
     // {
