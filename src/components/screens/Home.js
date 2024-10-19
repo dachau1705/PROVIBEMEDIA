@@ -1,5 +1,6 @@
 import { Box, Card, CardActionArea, CardMedia, Grid, Link, Paper, Typography } from '@mui/material'; // Import Box and Typography from MUI
 import { default as React } from 'react';
+import Banner from '../layout/Banner';
 import WhyChooseUsSection from './WhyChooseUsSection';
 
 const services = [
@@ -135,34 +136,37 @@ const Home = () => {
                 </Box>
             </Box>
 
-
-
-            <Box sx={{ backgroundColor: '#052e46', padding: 4 }}>
-                <Typography variant="h4" color="#fff" align="center" gutterBottom>
-                    PROVIBEMEDIA
-                </Typography>
-                <Typography variant="h5" color="#fff" align="center" gutterBottom>
-                    TRUYỀN THÔNG VÀ QUẢNG CÁO
-                </Typography>
-                <Grid container spacing={2}>
-                    {galleryImages.map((image, index) => (
-                        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                            <Card>
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        image={image}
-                                        alt={`Gallery image ${index + 1}`}
-                                        loading="lazy"
-                                        sx={{ height: 600, objectFit: 'cover' }}
-                                    />
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
+            <Box sx={{ backgroundColor: '#052e46', padding: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Box sx={{ width: "60%" }}>
+                    <Typography variant="h4" color="#fff" align="center" gutterBottom>
+                        PROVIBEMEDIA
+                    </Typography>
+                    <Typography variant="h5" color="#fff" align="center" gutterBottom>
+                        TRUYỀN THÔNG VÀ QUẢNG CÁO
+                    </Typography>
+                    <Grid container spacing={2}>
+                        {galleryImages.map((image, index) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                                <Card>
+                                    <CardActionArea>
+                                        <CardMedia
+                                            component="img"
+                                            image={image}
+                                            alt={`Gallery image ${index + 1}`}
+                                            loading="lazy"
+                                            sx={{ height: 600, objectFit: 'cover' }}
+                                        />
+                                    </CardActionArea>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Box>
             </Box>
+
             <WhyChooseUsSection />
+
+            <Banner />
         </div>
     );
 };
