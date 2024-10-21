@@ -11,6 +11,9 @@ const theme = createTheme({
       white: '#ffffff',
     },
   },
+  typography: {
+    fontFamily: 'Montserrat, sans-serif',
+  },
 });
 
 ReactDOM.render(
